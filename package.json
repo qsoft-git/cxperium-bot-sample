@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node ./src",
+    "dev": "NODE_ENV=development ts-node ./src",
+    "start": "NODE_ENV=production node ./dist",
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -25,6 +26,7 @@
   },
   "homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
   "dependencies": {
+    "cxperium-bot-engine": "^1.0.10"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
