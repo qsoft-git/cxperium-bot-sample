@@ -1,0 +1,50 @@
+{
+  "name": "cxperium-bot-sample",
+  "version": "1.0.0",
+  "description": "Cxperium Bot Sample",
+  "author": "QSoft Bilişim",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node ./src",
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qsoft-git/cxperium-bot-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qsoft-git/cxperium-bot-sample/issues"
+  },
+  "homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
+  "dependencies": {
+    "cxperium-bot-engine": "^1.0.10"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.42.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "source-map-support": "^0.5.21",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.1.3"
+  }
+}
