@@ -1,27 +1,45 @@
-// Envrionments.
-const { NODE_ENV } = process.env;
+// Node modules.
+import * as path from 'path';
 
+// Envrionments.
+const { LOCAL_ENGINE_STATUS, NODE_ENV, PORT, HOST } = process.env;
+
+// Variables.
 let nodeEnvWithImportEngine: string = '';
 
-switch (NODE_ENV) {
-  case 'development':
-    nodeEnvWithImportEngine = '../engine';
-    break;
+// Constants.
+const port: string = PORT || '3000';
+const host: string = HOST || 'localhost';
+const mode: any = NODE_ENV || null;
+const DIALOG_PATH: string = path.join(__dirname, '/', 'dialog');
 
-  case 'production':
-    nodeEnvWithImportEngine = 'cxperium-bot-engine';
-    break;
+// Set nodeEnvWithImportEngine.
+switch (LOCAL_ENGINE_STATUS) {
+	case 'true':
+		nodeEnvWithImportEngine = '../engine';
+		break;
 
-  default:
-    throw new Error('NODE_ENV is not set.');
+	case 'false':
+		nodeEnvWithImportEngine = 'cxperium-bot-engine';
+		break;
+
+	default:
+		throw new Error('NODE_ENV is not set.');
 }
 
+// Run.
 main();
 
-async function main() {
-  const { app } = await import(nodeEnvWithImportEngine);
+async function main(): Promise<void> {
+	const { Engine } = await import(nodeEnvWithImportEngine);
 
-  app.listen(3000, () => {
-    console.log('Listening on port 3000');
-  });
+	const engine = new Engine({
+		port,
+		host,
+		mode,
+		apiKey: '1234567890',
+		dialogPath: DIALOG_PATH,
+	});
+
+	engine.listen();
 }
