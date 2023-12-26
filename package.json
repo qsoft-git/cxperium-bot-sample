@@ -7,7 +7,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "NODE_ENV=development LOCAL_ENGINE_STATUS=false ts-node ./src",
-    "start": "NODE_ENV=production LOCAL_ENGINE_STATUS=false ./dist",
+    "start": "NODE_ENV=production LOCAL_ENGINE_STATUS=false node ./dist",
     "dev:engine": "NODE_ENV=development LOCAL_ENGINE_STATUS=true ts-node ./src ",
     "start:engine": "NODE_ENV=production LOCAL_ENGINE_STATUS=true node ./dist",
     "dev:build:engine": "cd ./engine && npm run build && cd .. && npm run dev:engine ",
@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
   "dependencies": {
-    "cxperium-bot-engine": "^1.0.13"
+    "cxperium-bot-engine": "^1.0.14"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
