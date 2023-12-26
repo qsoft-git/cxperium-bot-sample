@@ -12,6 +12,7 @@ const port: string = PORT || '3000';
 const host: string = HOST || 'localhost';
 const mode: any = NODE_ENV || null;
 const DIALOG_PATH: string = path.join(__dirname, '/', 'dialog');
+const PUBLIC_PATH: string = path.join(__dirname, '/', 'public');
 
 // Set nodeEnvWithImportEngine.
 switch (LOCAL_ENGINE_STATUS) {
@@ -39,6 +40,7 @@ async function main(): Promise<void> {
 		mode,
 		apiKey: '1234567890',
 		dialogPath: DIALOG_PATH,
+		publicPath: PUBLIC_PATH,
 	});
 
 	engine.listen();

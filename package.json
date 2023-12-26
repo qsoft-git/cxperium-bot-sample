@@ -8,8 +8,10 @@
   "scripts": {
     "dev": "NODE_ENV=development LOCAL_ENGINE_STATUS=false ts-node ./src",
     "start": "NODE_ENV=production LOCAL_ENGINE_STATUS=false ./dist",
-    "dev:engine": "NODE_ENV=development LOCAL_ENGINE_STATUS=true ts-node ./src",
+    "dev:engine": "NODE_ENV=development LOCAL_ENGINE_STATUS=true ts-node ./src ",
     "start:engine": "NODE_ENV=production LOCAL_ENGINE_STATUS=true node ./dist",
+    "dev:build:engine": "cd ./engine && npm run build && cd .. && npm run dev:engine ",
+    "start:build:engine": "cd ./engine && npm run build && cd .. && npm run start:engine ",
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -28,6 +30,7 @@
   },
   "homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
   "dependencies": {
+    "@types/cookie-parser": "^1.4.6",
     "cxperium-bot-engine": "^1.0.10",
     "require-all": "^3.0.0"
   },
