@@ -1,4 +1,4 @@
-import { app } from "cxperium-bot-engine";
+import { app } from "../engine";
 
 app.listen(3000, () => {
     console.log('Listening on port 3000');
