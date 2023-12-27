@@ -19,6 +19,5 @@
 		"noFallthroughCasesInSwitch": false
 	},
 	"include": ["src/**/*"],
-	"exclude": ["src/**/*.ts", "src/**/*.md"],
 	"hooks": ["copy-files"]
 }
