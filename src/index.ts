@@ -1,18 +1,14 @@
 // Node modules.
-import * as path from 'path';
+import * as dotenv from 'dotenv';
+
+// Load .env file.
+dotenv.config();
 
 // Envrionments.
-const { LOCAL_ENGINE_STATUS, NODE_ENV, PORT, HOST } = process.env;
+const { LOCAL_ENGINE_STATUS, PORT, HOST, API_KEY, CALLBACK_URL } = process.env;
 
 // Variables.
 let nodeEnvWithImportEngine: string = '';
-
-// Constants.
-const port: string = PORT || '3000';
-const host: string = HOST || 'localhost';
-const mode: any = NODE_ENV || null;
-const DIALOG_PATH: string = path.join(__dirname, '/', 'dialog');
-const PUBLIC_PATH: string = path.join(__dirname, '/', 'public');
 
 // Set nodeEnvWithImportEngine.
 switch (LOCAL_ENGINE_STATUS) {
@@ -25,7 +21,7 @@ switch (LOCAL_ENGINE_STATUS) {
 		break;
 
 	default:
-		throw new Error('NODE_ENV is not set.');
+		throw new Error('LOCAL_ENGINE_STATUS is not set.');
 }
 
 // Run.
@@ -35,12 +31,11 @@ async function main(): Promise<void> {
 	const { Engine } = await import(nodeEnvWithImportEngine);
 
 	const engine = new Engine({
-		port,
-		host,
-		mode,
-		apiKey: '1234567890',
-		dialogPath: DIALOG_PATH,
-		publicPath: PUBLIC_PATH,
+		port: PORT,
+		host: HOST,
+		apiKey: API_KEY,
+		srcPath: __dirname,
+		callbackUrl: CALLBACK_URL,
 	});
 
 	engine.listen();
