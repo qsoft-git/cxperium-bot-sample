@@ -38,5 +38,5 @@ async function main(): Promise<void> {
 		callbackUrl: CALLBACK_URL,
 	});
 
-	engine.listen();
+	engine.execute();
 }
