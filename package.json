@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
   "dependencies": {
-    "cxperium-bot-engine": "file:./engine",
+    "cxperium-bot-engine": "^1.0.16",
     "dotenv": "^16.3.1",
     "node-fetch": "^3.3.2"
   },
