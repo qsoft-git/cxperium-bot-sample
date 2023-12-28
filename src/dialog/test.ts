@@ -8,6 +8,6 @@ export default class extends ServiceBaseDialog implements IDialog {
 	}
 
 	runDialog() {
-		console.log('Run Rialog - Bilmem');
+		console.log('Run Rialog - Test');
 	}
 }
