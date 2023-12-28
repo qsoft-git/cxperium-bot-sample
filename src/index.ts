@@ -5,30 +5,13 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Envrionments.
-const { LOCAL_ENGINE_STATUS, PORT, HOST, API_KEY, CALLBACK_URL } = process.env;
-
-// Variables.
-let nodeEnvWithImportEngine: string = '';
-
-// Set nodeEnvWithImportEngine.
-switch (LOCAL_ENGINE_STATUS) {
-	case 'true':
-		nodeEnvWithImportEngine = '../engine';
-		break;
-
-	case 'false':
-		nodeEnvWithImportEngine = 'cxperium-bot-engine';
-		break;
-
-	default:
-		throw new Error('LOCAL_ENGINE_STATUS is not set.');
-}
+const { PORT, HOST, API_KEY, CALLBACK_URL } = process.env;
 
 // Run.
 main();
 
 async function main(): Promise<void> {
-	const { Engine } = await import(nodeEnvWithImportEngine);
+	const { Engine } = await import('cxperium-bot-engine');
 
 	const engine = new Engine({
 		port: PORT,
