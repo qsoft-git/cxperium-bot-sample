@@ -1,9 +1,12 @@
 // Node modules.
-import { IDialog, ServiceBaseDialog } from 'cxperium-bot-engine';
+import {
+	IDialog,
+	ServiceBaseDialog,
+	TBaseDialogCtor,
+} from 'cxperium-bot-engine';
 
 export default class extends ServiceBaseDialog implements IDialog {
-	constructor(data: any) {
-		console.log('Test Dialog', data);
+	constructor(data: TBaseDialogCtor) {
 		super(data);
 	}
 
