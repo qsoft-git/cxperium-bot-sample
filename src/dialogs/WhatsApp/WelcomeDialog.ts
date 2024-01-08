@@ -11,6 +11,18 @@ export default class extends ServiceBaseDialog implements IDialog {
 	}
 
 	runDialog() {
-		console.log('Run Rialog - Welcome');
+		if (this.conversation.isWaitAction('testConv')) {
+			this.testConv();
+		}
+
+		this.conversation.addWaitAction(
+			'CXPerium.Dialogs.WhatsApp.WelcomeDialog',
+			'testConv',
+		);
+		console.log('welcome test one');
+	}
+
+	testConv(): void {
+		console.log('wait action test');
 	}
 }
