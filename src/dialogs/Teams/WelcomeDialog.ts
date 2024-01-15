@@ -1,18 +1,18 @@
 // Node modules.
 import {
 	IDialog,
-	ServiceWhatsappBaseDialog,
+	ServiceTeamsBaseDialog,
 	TBaseDialogCtor,
 } from 'cxperium-bot-engine';
 
-export default class extends ServiceWhatsappBaseDialog implements IDialog {
+export default class extends ServiceTeamsBaseDialog implements IDialog {
 	constructor(data: TBaseDialogCtor) {
 		super(data);
 	}
 
-	runDialog() {
+	async runDialog() {
 		console.log('welcome test one');
 
-		this.sendMessage('Welcome to the WhatsApp bot!');
+		await this.sendMessage('Welcome to the Teams bot!');
 	}
 }
