@@ -12,7 +12,5 @@ export default class extends ServiceWhatsappBaseDialog implements IDialog {
 
 	runDialog() {
 		console.log('welcome test one');
-
-		this.sendMessage('Welcome to the WhatsApp bot!');
 	}
 }

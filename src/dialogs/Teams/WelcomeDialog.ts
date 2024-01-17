@@ -1,18 +1,16 @@
 // Node modules.
 import {
 	IDialog,
-	ServiceTeamsBaseDialog,
+	ServiceMicrosoftBaseDialog,
 	TBaseDialogCtor,
 } from 'cxperium-bot-engine';
 
-export default class extends ServiceTeamsBaseDialog implements IDialog {
+export default class extends ServiceMicrosoftBaseDialog implements IDialog {
 	constructor(data: TBaseDialogCtor) {
 		super(data);
 	}
 
 	async runDialog() {
 		console.log('welcome test one');
-
-		await this.sendMessage('Welcome to the Teams bot!');
 	}
 }
