@@ -10,7 +10,7 @@ export default class extends ServiceWhatsappBaseDialog implements IDialog {
 		super(data);
 	}
 
-	runDialog() {
-		console.log('welcome test one');
+	async runDialog(): Promise<void> {
+		console.log('Whatsapp welcome dialog worked.');
 	}
 }

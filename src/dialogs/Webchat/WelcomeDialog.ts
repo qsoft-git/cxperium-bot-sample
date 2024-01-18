@@ -10,7 +10,7 @@ export default class extends ServiceMicrosoftBaseDialog implements IDialog {
 		super(data);
 	}
 
-	async runDialog() {
-		console.log('welcome test one');
+	async runDialog(): Promise<void> {
+		console.log('WebChat welcome dialog worked.');
 	}
 }
