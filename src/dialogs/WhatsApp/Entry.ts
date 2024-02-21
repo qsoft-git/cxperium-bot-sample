@@ -11,7 +11,7 @@ export default class extends ServiceWhatsappBaseDialog implements IDialog {
 	}
 
 	async runDialog(): Promise<void> {
-		// if you want to finish entry throw this error.
-		throw new Error('end');
+		//* if you want to finish entry throw this error.
+		// throw new Error('end');
 	}
 }

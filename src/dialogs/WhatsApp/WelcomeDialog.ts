@@ -11,6 +11,8 @@ export default class extends ServiceWhatsappBaseDialog implements IDialog {
 	}
 
 	async runDialog(): Promise<void> {
+		this.sendMessage('Hello World');
+
 		console.log('Whatsapp welcome dialog worked.');
 	}
 }
