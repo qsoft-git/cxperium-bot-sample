@@ -19,7 +19,7 @@ export default class
 			'header',
 			'body',
 			'footer',
-			'CXPerium.Dialogs.WhatsApp.FlowTest',
+			'CXPerium.Dialogs.WhatsApp.FlowExample',
 			'1074013033730193',
 			'Reservation Request', // => CTA button title.
 			'RESERVATION_SCREEN', // => Given screen of the flow
