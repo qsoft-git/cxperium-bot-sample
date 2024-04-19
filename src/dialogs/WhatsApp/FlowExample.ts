@@ -31,4 +31,8 @@ export default class
 		// To catch the flow response, you have to implement the IFlow interface.
 		// console.log(this.activity.flow.responseJson);
 	}
+
+	returnResponse(body: any) {
+		// throw new Error('Method not implemented.');
+	}
 }
