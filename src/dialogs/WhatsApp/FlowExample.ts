@@ -32,7 +32,7 @@ export default class
 		// console.log(this.activity.flow.responseJson);
 	}
 
-	returnResponse(body: any) {
+	async returnResponse(body: any) {
 		// throw new Error('Method not implemented.');
 	}
 }
