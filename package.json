@@ -1,40 +1,40 @@
 {
-  "name": "cxperium-bot-sample",
-  "version": "1.0.0",
-  "description": "Cxperium Bot Sample",
-  "author": "QSoft Bilişim",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "scripts": {
-    "dev": "NODE_ENV=development ts-node ./src",
-    "start": "NODE_ENV=production node ./dist",
-    "build": "tsc -p tsconfig.build.json",
-    "build:watch": "tsc -p tsconfig.build.json --watch",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qsoft-git/cxperium-bot-sample.git"
-  },
-  "bugs": {
-    "url": "https://github.com/qsoft-git/cxperium-bot-sample/issues"
-  },
-  "homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
-  "dependencies": {
-    "cxperium-bot-engine": "file:../cxperium-bot-engine",
-    "dotenv": "^16.3.1"
-  },
-  "devDependencies": {
-    "@types/node": "^20.10.6",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
-    "@typescript-eslint/parser": "^6.17.0",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.2",
-    "prettier": "^3.1.1",
-    "ts-node": "^10.9.2",
-    "tsc-hooks": "^1.1.2",
-    "typescript": "^5.3.3"
-  }
+	"name": "cxperium-bot-sample",
+	"version": "1.0.0",
+	"description": "Cxperium Bot Sample",
+	"author": "QSoft Bilişim",
+	"license": "MIT",
+	"main": "dist/index.js",
+	"scripts": {
+		"dev": "NODE_ENV=development ts-node ./src",
+		"start": "NODE_ENV=production node ./dist",
+		"build": "tsc -p tsconfig.build.json",
+		"build:watch": "tsc -p tsconfig.build.json --watch",
+		"format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+		"lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/qsoft-git/cxperium-bot-sample.git"
+	},
+	"bugs": {
+		"url": "https://github.com/qsoft-git/cxperium-bot-sample/issues"
+	},
+	"homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
+	"dependencies": {
+		"cxperium-bot-engine": "^1.1.33",
+		"dotenv": "^16.3.1"
+	},
+	"devDependencies": {
+		"@types/node": "^20.10.6",
+		"@typescript-eslint/eslint-plugin": "^6.17.0",
+		"@typescript-eslint/parser": "^6.17.0",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.1.2",
+		"prettier": "^3.1.1",
+		"ts-node": "^10.9.2",
+		"tsc-hooks": "^1.1.2",
+		"typescript": "^5.3.3"
+	}
 }

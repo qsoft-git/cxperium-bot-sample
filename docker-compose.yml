@@ -1,0 +1,19 @@
+version: "3.1"
+
+services:
+  qchatgpt:
+    image: index.docker.io/qsoftdocker/qsoft-chatgpt:latest
+    restart: always
+    environment:
+      BA_USERNAME: ${BA_USERNAME}
+      BA_PASSWORD: ${BA_PASSWORD}
+      NODE_ENV: ${NODE_ENV}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_ASSISTANT_ID: ${OPENAI_ASSISTANT_ID}
+    ports:
+      - 3000:3000
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1m"
+        max-file: "1"
