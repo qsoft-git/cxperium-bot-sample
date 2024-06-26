@@ -11,11 +11,6 @@ export default class extends ServiceMicrosoftBaseDialog implements IDialog {
 	}
 
 	async runDialog(): Promise<void> {
-		const result = await this.services.dialog.runWithAiFrom(
-			this,
-			this.activity.text,
-		);
-
-		await this.sendMessage(result);
+		console.log('aaaaaa');
 	}
 }
