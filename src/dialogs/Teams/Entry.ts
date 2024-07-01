@@ -11,6 +11,7 @@ export default class extends ServiceMicrosoftBaseDialog implements IDialog {
 	}
 
 	async runDialog(): Promise<void> {
-		console.log('aaaaaa');
+		//* if you want to finish entry throw this error.
+		// throw new Error('end');
 	}
 }
