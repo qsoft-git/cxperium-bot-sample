@@ -22,7 +22,7 @@
 	},
 	"homepage": "https://github.com/qsoft-git/cxperium-bot-sample#readme",
 	"dependencies": {
-		"cxperium-bot-engine": "1.1.68",
+		"cxperium-bot-engine": "1.1.74",
 		"dotenv": "^16.3.1"
 	},
 	"devDependencies": {
