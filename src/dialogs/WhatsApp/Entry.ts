@@ -3,6 +3,7 @@ import {
 	IDialog,
 	ServiceWhatsappBaseDialog,
 	TBaseDialogCtor,
+	// IMessageEvent,
 } from 'cxperium-bot-engine';
 
 export default class extends ServiceWhatsappBaseDialog implements IDialog {
@@ -15,6 +16,8 @@ export default class extends ServiceWhatsappBaseDialog implements IDialog {
 	// onChatGPTMessage(messageObject: TIntentPrediction): void;
 	// onDialogflowMessage(messageObject: TIntentPrediction): void;
 	// onDidNotUnderstand(): void;
+	// onEndOfChatSession?(): void;
+	// onClosingOfLiveChat?(): void;
 
 	async runDialog(): Promise<void> {
 		//* if you want to finish entry throw this error.
