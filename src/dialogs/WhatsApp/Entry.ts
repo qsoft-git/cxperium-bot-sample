@@ -16,7 +16,7 @@ export default class extends ServiceWhatsappBaseDialog implements IDialog {
 	// onChatGPTMessage(messageObject: TIntentPrediction): void;
 	// onDialogflowMessage(messageObject: TIntentPrediction): void;
 	// onDidNotUnderstand(): void;
-	// onEndOfChatSession?(): void;
+	// onSessionTimeout?(): void;
 	// onClosingOfLiveChat?(): void;
 
 	async runDialog(): Promise<void> {
